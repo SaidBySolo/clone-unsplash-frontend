@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://192.168.2.8:8080';
+const API_BASE_URL = 'https://unsplash.saebasol.org';
 
 interface FetchOptions extends RequestInit {
   requiresAuth?: boolean;
