@@ -1,5 +1,3 @@
-const API_BASE_URL = 'https://unsplash.saebasol.org';
-
 interface FetchOptions extends RequestInit {
   requiresAuth?: boolean;
 }
@@ -42,7 +40,7 @@ export async function apiFetch<T>(
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, config);
+    const response = await fetch(endpoint, config);
 
     if (!response.ok) {
       const error = await response.json().catch(() => ({}));
@@ -79,7 +77,7 @@ export async function apiUpload<T>(
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`, config);
+    const response = await fetch(endpoint, config);
 
     if (!response.ok) {
       const error = await response.json().catch(() => ({}));
